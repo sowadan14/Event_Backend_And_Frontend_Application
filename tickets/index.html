@@ -1,0 +1,517 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="h-100">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
+		<meta name="description" content="Gambolthemes">
+		<meta name="author" content="Gambolthemes">		
+		<title>Réservation et achat de tickets </title>
+		
+		<!-- Favicon Icon -->
+		<link rel="icon" type="image/png" href="images/fav.png">
+		
+		<!-- Stylesheets -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+		<link href='vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/responsive.css" rel="stylesheet">
+		<link href="css/night-mode.css" rel="stylesheet">
+		
+		<!-- Vendor Stylesheets -->
+		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+		<link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+		<link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">		
+		
+	</head>
+
+<body class="d-flex flex-column h-100">
+
+<!-- Header Start-->
+<header class="header">
+	<div class="header-inner">
+		<nav class="navbar navbar-expand-lg bg-barren barren-head navbar fixed-top justify-content-sm-start pt-0 pb-0">
+			<div class="container">	
+				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+					<span class="navbar-toggler-icon">
+						<i class="fa-solid fa-bars"></i>
+					</span>
+				</button>
+				<a class="navbar-brand order-1 order-lg-0 ml-lg-0 ml-2 me-auto" href="index.html">
+					<div class="res-main-logo">
+						<img src="images/logo-icon.svg" alt="">
+					</div>
+					<div class="main-logo" id="logo">
+						<img src="images/logo.jpeg" alt="">
+						<img class="logo-inverse" src="images/dark-logo.svg" alt="">
+					</div>
+				</a>
+				<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+					<div class="offcanvas-header">
+						<div class="offcanvas-logo" id="offcanvasNavbarLabel">
+							<img src="images/logo-icon.svg" alt="">
+						</div>
+						<button type="button" class="close-btn" data-bs-dismiss="offcanvas" aria-label="Close">
+							<i class="fa-solid fa-xmark"></i>
+						</button>
+					</div>
+					<div class="offcanvas-body">
+						<div class="offcanvas-top-area">
+							<div class="create-bg">
+								<a href="create.html" class="offcanvas-create-btn">
+									<i class="fa-solid fa-calendar-days"></i>
+									<span>Créer évènement</span>
+								</a>
+							</div>
+						</div>							
+						<ul class="navbar-nav justify-content-end flex-grow-1 pe_5">
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Tous les évènements
+								</a>
+								<ul class="dropdown-menu dropdown-submenu">
+									<li><a class="dropdown-item" href="explore_events.html">Liste d'événements</a></li>
+									<li><a class="dropdown-item" href="venue_event_detail_view.html">Liste d'évènement sur place</a></li>
+									<li><a class="dropdown-item" href="online_event_detail_view.html">Liste d'évènement en ligne</a></li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="pricing.html">Tarification</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="term_and_conditions.html">Termes et conditions</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="contact_us.html">Contact</a>
+							</li>
+						</ul>
+					</div>
+					<div class="offcanvas-footer">
+						<div class="offcanvas-social">
+							<h5>Contactez-nous</h5>
+							<ul class="social-links">
+								<li><a href="#" class="social-link"><i class="fab fa-facebook-square"></i></a>
+								<li><a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+								<li><a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+								<li><a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+								<li><a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="right-header order-2">
+					<ul class="align-self-stretch">
+						<li>
+							<a href="create.html" class="create-btn btn-hover">
+								<i class="fa-solid fa-calendar-days"></i>
+								<span>Créer évènement</span>
+							</a>
+						</li>
+						<li class="dropdown account-dropdown">
+							<a href="#" class="account-link" role="button" id="accountClick" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">
+								<img src="images/profile-imgs/client2.png" alt="">
+								<i class="fas fa-caret-down arrow-icon"></i>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-account dropdown-menu-end" aria-labelledby="accountClick">
+								<li>
+									<div class="dropdown-account-header">
+										<div class="account-holder-avatar">
+											<img src="images/profile-imgs/client2.png" alt="">
+										</div>
+										<h5>Basile SOWADAN</h5>
+										<p>basile14sowadan@gmail.com</p>
+									</div>
+								</li>
+								<li class="profile-link">
+									<a href="my_organisation_dashboard.html" class="link-item">Tableau de bord Organisation</a>
+									<a href="organiser_profile_view.html" class="link-item">Profile Organisateur</a>	
+									<a href="attendee_profile_view.html" class="link-item">Profile participant</a>									
+									<a href="sign_in.html" class="link-item">Se déconecter</a>									
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="night_mode_switch__btn">
+								<div id="night-mode" class="fas fa-moon fa-sun"></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="overlay"></div>
+	</div>
+</header>
+<!-- Header End-->
+	
+	<!-- Body Start-->
+	<div class="wrapper">
+		<div class="hero-banner">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-xl-7 col-lg-9 col-md-10">
+						<div class="hero-banner-content">
+							<h2>La réservation et l'achat de tickets pour les événements en ligne le plus proche de vous</h2>
+							<p>Event-CERIL est une plateforme de réservation et d'achat de tickets en ligne pour les organisateurs, les promoteurs et les gestionnaires d'événements. Créez, promouvez et gérez facilement vos événements de tout type et de toute taille.</p>
+							<a href="create.html" class="main-btn btn-hover">Créer évènement <i class="fa-solid fa-arrow-right ms-3"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="explore-events p-80">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-12 col-lg-12 col-md-12">
+						<div class="main-title">
+							<h3>Tous les évènements</h3>
+						</div>
+					</div>
+					<div class="col-xl-12 col-lg-12 col-md-12">
+						<div class="event-filter-items">
+							<div class="featured-controls">
+								<div class="filter-tag">
+									<a href="explore_events_by_date.html" class="active">Tout</a>
+									<a href="explore_events_by_date.html">Aujourd'hui</a>
+									<a href="explore_events_by_date.html">Demain</a>
+									<a href="explore_events_by_date.html">Cette semaine</a>
+									<a href="explore_events_by_date.html">Cette fin de semaine</a>
+									<a href="explore_events_by_date.html">La semaine prochaine</a>
+									<a href="explore_events_by_date.html">Le weekend prochain</a>
+									<a href="explore_events_by_date.html">Ce mois</a>
+									<a href="explore_events_by_date.html">Le mois prochain</a>
+									<a href="explore_events_by_date.html">Cette année</a>
+									<a href="explore_events_by_date.html">L'année prochaine</a>
+								</div>
+								<div class="controls">
+									<button type="button" class="control" data-filter="all">Tout</button>
+									<button type="button" class="control" data-filter=".arts">Arts</button>
+									<button type="button" class="control" data-filter=".business">Business</button>
+									<button type="button" class="control" data-filter=".concert">Concert</button>
+									<button type="button" class="control" data-filter=".workshops">Conférence</button>
+									<button type="button" class="control" data-filter=".coaching_consulting">Coaching and Consulting</button>
+									<button type="button" class="control" data-filter=".health_Wellness">Santé et bien être</button>									
+									<button type="button" class="control" data-filter=".volunteer">Bénévol</button>
+									<button type="button" class="control" data-filter=".sports">Sports</button>
+									<button type="button" class="control" data-filter=".free">Gratuit</button>	
+								</div>
+								<div class="row" data-ref="event-filter-content">
+									<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix arts concert workshops volunteer sports health_Wellness" data-ref="mixitup-target">
+										<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev9.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">Promotion de la jeune fille en le milieu scolaire</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">5000 F CFA*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>25 novembre 2022</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>samedi, 15h 30</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix business workshops volunteer sports health_Wellness" data-ref="mixitup-target">
+										<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/event7.jpeg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">Développement individuel</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">10 000 F CFA*</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>10 restante </span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>12 decembre 2023</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Dimanche, 17h 00 </span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>2h</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix coaching_consulting free concert volunteer health_Wellness bussiness" data-ref="mixitup-target">
+										<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/event6.jpeg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">Réunion hbdomadaire</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">gratuit*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>05 Août</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Samedi, 16h 30 </span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>3h</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class=" col-xl-3 col-lg-4 col-md-6 col-sm-12 mix health_Wellness concert volunteer sports free business" data-ref="mixitup-target">
+										<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/event4.jpeg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">Vie de couple</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">55 000 F CFA</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>7 restants</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>01 Février</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Mardi, 17h 30 </span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix concert sports health_Wellness free arts" data-ref="mixitup-target">
+										<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/event7.jpeg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">Comémoration de la 27ème anniversaire de l'indépendance du Togo</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">35 000 F CFA*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>27 Mai</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Jeudi, 11h 00 </span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>5h</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix workshops concert arts volunteer sports" data-ref="mixitup-target">
+										<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/event2.jpeg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">Démarrer le business</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">250 000 F CFA*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>30 Juin</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Mercredi, 16h 30 </span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix volunteer free health_Wellness" data-ref="mixitup-target">
+										<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/event1.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">Tutoriel pour comprendre le développement des applications informatique</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">30 000 F CFA*</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>17 restants</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>17 Juillet</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Dimanche, 17h 30 </span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mix sports concert volunteer arts" data-ref="mixitup-target">
+										<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/event12.jpeg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">Trainee Program on Leadership' 2022</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">100 000 F CFA*</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>7 Restant</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>20 Août</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Samedi, 11h 30</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>12h</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="browse-btn">
+									<a href="explore_events.html" class="main-btn btn-hover ">Parcourir tout</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+
+	</div> 	<!-- Body End-->
+	
+
+      <!-- Footer Start-->
+	<footer class="footer mt-auto">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6">
+						<div class="footer-content">
+							<h4>Entreprise</h4>
+							<ul class="footer-link-list">
+<!-- 								<li><a href="about_us.html" class="footer-link">A propos de nous</a></li>
+ -->								<li><a href="contact_us.html" class="footer-link">Contact-nous</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="footer-content">
+							<h4>Liens utiles</h4>
+							<ul class="footer-link-list">
+								<li><a href="create.html" class="footer-link">Créer évènement</a></li>
+<!-- 								<li><a href="sell_tickets_online.html" class="footer-link">Vendre tickets en ligne</a></li>
+ -->								<li><a href="term_and_conditions.html" class="footer-link">Termes & Conditions</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="footer-content">
+							<h4>Resources</h4>
+							<ul class="footer-link-list">
+								<li><a href="pricing.html" class="footer-link">Tarification</a></li>
+<!-- 								<li><a href="refer_a_friend.html" class="footer-link">Référer un ami</a></li>
+ -->							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="footer-content">
+							<h4>Nous suivre</h4>
+							<ul class="social-links">
+								<li><a href="#" class="social-link"><i class="fab fa-facebook-square"></i></a>
+								<li><a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+								<li><a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+								<li><a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+								<li><a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+							</ul>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="footer-copyright-text">
+							<p class="mb-0">© 2023, <strong>Event-CERIL</strong>. Tous droits réservés. Propulsé par CERIL</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer End-->
+	
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="vendor/OwlCarousel/owl.carousel.js"></script>
+	<script src="vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>	
+	<script src="vendor/mixitup/dist/mixitup.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/night-mode.js"></script>
+	<script>	
+		var containerEl = document.querySelector('[data-ref~="event-filter-content"]');
+
+            var mixer = mixitup(containerEl, {
+                selectors: {
+                    target: '[data-ref~="mixitup-target"]'
+                }
+            });
+	</script>
+</body>
+</html>

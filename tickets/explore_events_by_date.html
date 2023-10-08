@@ -1,0 +1,1565 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="h-100">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
+		<meta name="description" content="Gambolthemes">
+		<meta name="author" content="Gambolthemes">		
+		<title>Réservation et achat de tickets</title>
+		
+		<!-- Favicon Icon -->
+		<link rel="icon" type="image/png" href="images/fav.png">
+		
+		<!-- Stylesheets -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+		<link href='vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/responsive.css" rel="stylesheet">
+		<link href="css/night-mode.css" rel="stylesheet">
+		
+		<!-- Vendor Stylesheets -->
+		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+		<link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+		<link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">		
+		
+	</head>
+
+<body class="d-flex flex-column h-100">
+	<!-- Header Start-->
+	<header class="header">
+		<div class="header-inner">
+			<nav class="navbar navbar-expand-lg bg-barren barren-head navbar fixed-top justify-content-sm-start pt-0 pb-0">
+				<div class="container">	
+					<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+						<span class="navbar-toggler-icon">
+							<i class="fa-solid fa-bars"></i>
+						</span>
+					</button>
+					<a class="navbar-brand order-1 order-lg-0 ml-lg-0 ml-2 me-auto" href="index.html">
+						<div class="res-main-logo">
+							<img src="images/logo-icon.svg" alt="">
+						</div>
+						<div class="main-logo" id="logo">
+							<img src="images/logo.jpeg" alt="">
+							<img class="logo-inverse" src="images/dark-logo.svg" alt="">
+						</div>
+					</a>
+					<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+						<div class="offcanvas-header">
+							<div class="offcanvas-logo" id="offcanvasNavbarLabel">
+								<img src="images/logo-icon.svg" alt="">
+							</div>
+							<button type="button" class="close-btn" data-bs-dismiss="offcanvas" aria-label="Close">
+								<i class="fa-solid fa-xmark"></i>
+							</button>
+						</div>
+						<div class="offcanvas-body">
+							<div class="offcanvas-top-area">
+								<div class="create-bg">
+									<a href="create.html" class="offcanvas-create-btn">
+										<i class="fa-solid fa-calendar-days"></i>
+										<span>Créer évènement</span>
+									</a>
+								</div>
+							</div>							
+							<ul class="navbar-nav justify-content-end flex-grow-1 pe_5">
+								<li class="nav-item">
+									<a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Tous les évènements
+									</a>
+									<ul class="dropdown-menu dropdown-submenu">
+										<li><a class="dropdown-item" href="explore_events.html">Liste d'événements</a></li>
+										<li><a class="dropdown-item" href="venue_event_detail_view.html">Liste d'évènement sur place</a></li>
+										<li><a class="dropdown-item" href="online_event_detail_view.html">Liste d'évènement en ligne</a></li>
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="pricing.html">Tarification</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="term_and_conditions.html">Termes et conditions</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="contact_us.html">Contact</a>
+								</li>
+							</ul>
+						</div>
+						<div class="offcanvas-footer">
+							<div class="offcanvas-social">
+								<h5>Contactez-nous</h5>
+								<ul class="social-links">
+									<li><a href="#" class="social-link"><i class="fab fa-facebook-square"></i></a>
+									<li><a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+									<li><a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+									<li><a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+									<li><a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="right-header order-2">
+						<ul class="align-self-stretch">
+							<li>
+								<a href="create.html" class="create-btn btn-hover">
+									<i class="fa-solid fa-calendar-days"></i>
+									<span>Créer évènement</span>
+								</a>
+							</li>
+							<li class="dropdown account-dropdown">
+								<a href="#" class="account-link" role="button" id="accountClick" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">
+									<img src="images/profile-imgs/client2.png" alt="">
+									<i class="fas fa-caret-down arrow-icon"></i>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-account dropdown-menu-end" aria-labelledby="accountClick">
+									<li>
+										<div class="dropdown-account-header">
+											<div class="account-holder-avatar">
+												<img src="images/profile-imgs/client2.png" alt="">
+											</div>
+											<h5>Basile SOWADAN</h5>
+											<p>basile14sowadan@gmail.com</p>
+										</div>
+									</li>
+									<li class="profile-link">
+										<a href="my_organisation_dashboard.html" class="link-item">Tableau de bord Organisation</a>
+										<a href="organiser_profile_view.html" class="link-item">Profile Organisateur</a>	
+										<a href="attendee_profile_view.html" class="link-item">Profil participant</a>									
+										<a href="sign_in.html" class="link-item">Se déconecter</a>									
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="night_mode_switch__btn">
+									<div id="night-mode" class="fas fa-moon fa-sun"></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="overlay"></div>
+		</div>
+	</header>
+	<!-- Header End-->
+	<!-- Body Start-->
+	<div class="wrapper">
+		<div class="hero-banner">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-xl-8 col-lg-8 col-md-10">
+						<div class="hero-banner-content">
+							<h2>Découvrez des événements pour tout ce que vous aimez</h2>
+							<div class="search-form main-form">
+								<div class="row g-3">
+									<div class="col-lg-5 col-md-12">
+										<div class="form-group search-category">
+											<select class="selectpicker" data-width="100%" data-size="5">
+												<option value="browse_all" data-icon="fa-solid fa-tower-broadcast" selected>Parcourir tout</option>
+												<option value="online_events" data-icon="fa-solid fa-video">Evènements en lignes</option>
+												<option value="venue_events" data-icon="fa-solid fa-location-dot">Evènements sur place</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-5 col-md-12">
+										<div class="form-group">
+											<select class="selectpicker" data-width="100%" data-size="5" data-live-search="true">
+												<option value="01" selected>Tout</option>
+												<option value="01">Arts</option>
+												<option value="02">Business</option>
+												<option value="03">Accompagnement et Conseil</option>
+												<option value="04">Communauté et culture</option>
+												<option value="05">Entrepreneuriat</option>
+												<option value="06">Éducation et formation</option>
+												<option value="07">La famille et les amis</option>
+												<option value="08">Mode et Beauté</option>
+												<option value="09">Film et divertissement</option>
+												<option value="10">Nourriture et boisson</option>
+												<option value="11">Gouvernement et politique</option>
+												<option value="12">Santé et bien-être</option>
+												<option value="13">Passe-temps et intérêts</option>
+												<option value="14">Musique et Théâtre</option>
+												<option value="15">Religion et spiritualité</option>
+												<option value="16">Science et Technologie</option>
+												<option value="17">Sports et aptitudes</option>
+												<option value="18">Voyage et plein air</option>
+												<option value="19">Arts visuels</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-2 col-md-12">
+										<a href="#" class="main-btn btn-hover w-100">Chercher</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="explore-events p-80">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-12 col-lg-12 col-md-12">
+						<div class="main-title">
+							<h3 class="all event-box" style="display: block;">Tous les évènements</h3>
+							<h3 class="today event-box">Aujourd'hui</h3>
+							<h3 class="tomorrow event-box">Demain</h3>
+							<h3 class="thisWeek event-box">Cette semaine</h3>
+							<h3 class="thisWeekend event-box">Ce Weekend</h3>
+							<h3 class="nextWeekend event-box">Weekend prochain</h3>
+							<h3 class="thisMonth event-box">Ce mois</h3>
+							<h3 class="nextMonth event-box">Mois procahin</h3>
+							<h3 class="thisYear event-box">Cette année</h3>
+							<h3 class="nextYear event-box">L'année prochaine</h3>
+						</div>
+						<div class="event-filter-items">
+							<div class="featured-controls">
+								<div class="filter-tag mb-3">
+									<label><input type="radio" name="colorRadio" value="all" checked=""><span>Tout</span></label>
+									<label><input type="radio" name="colorRadio" value="today"><span>Aujourd'hui</span></label>
+									<label><input type="radio" name="colorRadio" value="tomorrow"><span>Demain</span></label>
+									<label><input type="radio" name="colorRadio" value="thisWeek"><span>Cette semaine</span></label>
+									<label><input type="radio" name="colorRadio" value="thisWeekend"><span>Ce Weekend</span></label>
+									<label><input type="radio" name="colorRadio" value="nextWeekend"><span>Weekend prochain</span></label>
+									<label><input type="radio" name="colorRadio" value="thisMonth"><span>Ce mois</span></label>
+									<label><input type="radio" name="colorRadio" value="nextMonth"><span>Mois prochain</span></label>
+									<label><input type="radio" name="colorRadio" value="thisYear"><span>Cette année</span></label>
+									<label><input type="radio" name="colorRadio" value="nextYear"><span>L'année prochaine</span></label>
+								</div>
+
+
+								<div class="all event-box" style="display: block;">
+									<div class="row">
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev3.png" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title"> La Semaine africaine de la communication s'ouvre à l'Université de Lomé </a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">50 000 F CFA*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>23 mai 2019</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Jeudi, 14h 00</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev1.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">Salon des études en Europe 2020</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">45 000 F CFA*</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>6 restante</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>27 octobre - 02 novembre 2020</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Samedi, 11h 30 </span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>2h</span>
+												</div>
+											</div>
+										</div>
+										
+										
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev2.png" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">La mode, objet d’un colloque international à l’UL!!!</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">Gratuit*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>05 Mai</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Dimanche, 16h 30 PM</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>3h</span>
+												</div>
+											</div>
+										</div>
+										<div class=" col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev5.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">EVALA</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">10 000 F CFA</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>7 restant</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>23 Juillet</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Dimanche, 17h 30</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev4.png" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">
+												FESDA - Festival International des Danses Africaines - Togo
+											 		27 mai 2022</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">5 000 F CFA*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>27 May</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Fri, 12.00 PM</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>5h</span>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev7.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">Festival des divinités noires</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">2 000 F CFA*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>30 Juin</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Jeudi, 16h 30</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev6.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">Pratique de l'art oratoir</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">30 000 F CFA*</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>17 Remaining</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>17 Juillet</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Dimanche, 17h 30</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev8.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">Programme de stagiaires sur le leadership '2022</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">65 000 F CFA*</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>7 restants</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>20 Août</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Mercredi, 11h 30 </span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>12h</span>
+												</div>
+											</div>
+										</div>
+										
+									</div>
+								</div>					
+								<div class="today event-box">
+									<div class="row">
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev3.png" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title"> La Semaine africaine de la communication s'ouvre à l'Université de Lomé </a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">50 000 F CFA*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>23 mai 2019</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Jeudi, 14h 00</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev1.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">Salon des études en Europe 2020</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">45 000 F CFA*</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>6 restante</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>27 octobre - 02 novembre 2020</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Samedi, 11h 30 </span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>2h</span>
+												</div>
+											</div>
+										</div>
+										
+										
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev2.png" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">La mode, objet d’un colloque international à l’UL!!!</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">Gratuit*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>05 Mai</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Dimanche, 16h 30 PM</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>3h</span>
+												</div>
+											</div>
+										</div>
+									
+										
+										<div class=" col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev5.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">EVALA</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">10 000 F CFA</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>7 restant</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>23 Juillet</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Dimanche, 17h 30</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tomorrow event-box">
+									<div class="row">								
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev4.png" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">
+												FESDA - Festival International des Danses Africaines - Togo
+											 27 mai 2022</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">5 000 F CFA*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>27 May</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Fri, 12.00 PM</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>5h</span>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev7.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">Festival des divinités noires</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">2 000 F CFA*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>30 Juin</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Jeudi, 16h 30</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev6.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">Pratique de l'art oratoir</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">30 000 F CFA*</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>17 Remaining</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>17 Juillet</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Dimanche, 17h 30</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev8.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">Programme de stagiaires sur le leadership '2022</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">65 000 F CFA*</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>7 restants</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>20 Août</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Mercredi, 11h 30 </span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>12h</span>
+												</div>
+											</div>
+										
+										</div>
+									</div>
+								</div>
+								<div class="thisWeek event-box">
+									<div class="row">
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev4.png" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">
+												FESDA - Festival International des Danses Africaines - Togo
+											 27 mai 2022</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">5 000 F CFA*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>27 May</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Fri, 12.00 PM</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>5h</span>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev7.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">Festival des divinités noires</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">2 000 F CFA*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>30 Juin</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Jeudi, 16h 30</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev6.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">Pratique de l'art oratoir</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">30 000 F CFA*</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>17 Remaining</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>17 Juillet</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Dimanche, 17h 30</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev8.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">Programme de stagiaires sur le leadership '2022</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">65 000 F CFA*</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>7 restants</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>20 Août</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Mercredi, 11h 30 </span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>12h</span>
+												</div>
+											</div>
+										
+										</div>
+									</div>
+								</div>
+								<div class="thisWeekend event-box">
+									<div class="row">
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev3.png" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title"> La Semaine africaine de la communication s'ouvre à l'Université de Lomé </a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">50 000 F CFA*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>23 mai 2019</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Jeudi, 14h 00</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev1.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">Salon des études en Europe 2020</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">45 000 F CFA*</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>6 restante</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>27 octobre - 02 novembre 2020</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Samedi, 11h 30 </span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>2h</span>
+												</div>
+											</div>
+										</div>
+										
+										
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev2.png" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">La mode, objet d’un colloque international à l’UL!!!</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">Gratuit*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>05 Mai</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Dimanche, 16h 30 PM</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>3h</span>
+												</div>
+											</div>
+										</div>
+									
+										
+										<div class=" col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev5.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">EVALA</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">10 000 F CFA</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>7 restant</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>23 Juillet</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Dimanche, 17h 30</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+											
+									</div>
+								</div>
+								<div class="nextWeekend event-box">
+									<div class="row">
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev4.png" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">
+												FESDA - Festival International des Danses Africaines - Togo
+											 27 mai 2022</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">5 000 F CFA*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>27 May</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Fri, 12.00 PM</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>5h</span>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev7.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">Festival des divinités noires</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">2 000 F CFA*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>30 Juin</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Jeudi, 16h 30</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev6.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">Pratique de l'art oratoir</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">30 000 F CFA*</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>17 Remaining</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>17 Juillet</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Dimanche, 17h 30</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev8.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">Programme de stagiaires sur le leadership '2022</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">65 000 F CFA*</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>7 restants</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>20 Août</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Mercredi, 11h 30 </span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>12h</span>
+												</div>
+											</div>
+										
+										</div>
+									</div>
+								</div>
+								<div class="thisMonth event-box">
+									<div class="row">
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev3.png" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title"> La Semaine africaine de la communication s'ouvre à l'Université de Lomé </a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">50 000 F CFA*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>23 mai 2019</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Jeudi, 14h 00</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev1.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">Salon des études en Europe 2020</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">45 000 F CFA*</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>6 restante</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>27 octobre - 02 novembre 2020</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Samedi, 11h 30 </span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>2h</span>
+												</div>
+											</div>
+										</div>
+										
+										
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev2.png" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">La mode, objet d’un colloque international à l’UL!!!</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">Gratuit*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>05 Mai</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Dimanche, 16h 30 PM</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>3h</span>
+												</div>
+											</div>
+										</div>
+									
+										
+										<div class=" col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev5.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">EVALA</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">10 000 F CFA</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>7 restant</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>23 Juillet</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Dimanche, 17h 30</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="nextMonth event-box">
+									<div class="row">
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev3.png" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title"> La Semaine africaine de la communication s'ouvre à l'Université de Lomé </a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">50 000 F CFA*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>23 mai 2019</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Jeudi, 14h 00</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev1.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">Salon des études en Europe 2020</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">45 000 F CFA*</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>6 restante</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>27 octobre - 02 novembre 2020</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Samedi, 11h 30 </span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>2h</span>
+												</div>
+											</div>
+										</div>
+										
+										
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev2.png" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">La mode, objet d’un colloque international à l’UL!!!</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">Gratuit*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>05 Mai</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Dimanche, 16h 30 </span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>3h</span>
+												</div>
+											</div>
+										</div>
+									
+										
+										<div class=" col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev5.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">EVALA</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">10 000 F CFA</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>7 restant</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>23 Juillet</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Dimanche, 17h 30</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="thisYear event-box">
+									<div class="row">
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev3.png" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title"> La Semaine africaine de la communication s'ouvre à l'Université de Lomé </a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">50 000 F CFA*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>23 mai 2019</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Jeudi, 14h 00</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev1.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">Salon des études en Europe 2020</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">45 000 F CFA*</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>6 restante</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>27 octobre - 02 novembre 2020</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Samedi, 11h 30 </span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>2h</span>
+												</div>
+											</div>
+										</div>
+										
+										
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev2.png" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">La mode, objet d’un colloque international à l’UL!!!</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">Gratuit*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>05 Mai</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Dimanche, 16h 30 PM</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>3h</span>
+												</div>
+											</div>
+										</div>
+									
+										
+										<div class=" col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev5.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">EVALA</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">10 000 F CFA</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>7 restant</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>23 Juillet</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Dimanche, 17h 30</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="nextYear event-box">
+									<div class="row">
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev3.png" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title"> La Semaine africaine de la communication s'ouvre à l'Université de Lomé </a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">50 000 F CFA*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>23 mai 2019</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Jeudi, 14h 00</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev1.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">Salon des études en Europe 2020</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">45 000 F CFA*</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>6 restante</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>27 octobre - 02 novembre 2020</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Samedi, 11h 30 </span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>2h</span>
+												</div>
+											</div>
+										</div>
+										
+										
+										<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="venue_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev2.png" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="venue_event_detail_view.html" class="event-title">La mode, objet d’un colloque international à l’UL!!!</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">Gratuit*</span>
+													<span class="remaining"></span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>05 Mai</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Dimanche, 16h 30 PM</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>3h</span>
+												</div>
+											</div>
+										</div>
+									
+										
+										<div class=" col-xl-3 col-lg-4 col-md-6 col-sm-12">
+											<div class="main-card mt-4">
+											<div class="event-thumbnail">
+												<a href="online_event_detail_view.html" class="thumbnail-img">
+													<img src="images/event-imgs/ev5.jpg" alt="">
+												</a>
+												<span class="bookmark-icon" title="Bookmark"></span>
+											</div>
+											<div class="event-content">
+												<a href="online_event_detail_view.html" class="event-title">EVALA</a>
+												<div class="duration-price-remaining">
+													<span class="duration-price">10 000 F CFA</span>
+													<span class="remaining"><i class="fa-solid fa-ticket fa-rotate-90"></i>7 restant</span>
+												</div>
+											</div>
+											<div class="event-footer">
+												<div class="event-timing">
+													<div class="publish-date">
+														<span><i class="fa-solid fa-calendar-day me-2"></i>23 Juillet</span>
+														<span class="dot"><i class="fa-solid fa-circle"></i></span>
+														<span>Dimanche, 17h 30</span>
+													</div>
+													<span class="publish-time"><i class="fa-solid fa-clock me-2"></i>1h</span>
+												</div>
+											</div>
+										</div>
+									
+									</div>
+								</div>
+								<div class="browse-btn">
+									<a href="#" class="main-btn btn-hover ">Plus d'événement</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Body End-->
+	 <!-- Footer Start-->
+	<footer class="footer mt-auto">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6">
+						<div class="footer-content">
+							<h4>Entreprise</h4>
+							<ul class="footer-link-list">
+								<li><a href="about_us.html" class="footer-link">A propos de nous</a></li>
+								<li><a href="contact_us.html" class="footer-link">Contact-nous</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="footer-content">
+							<h4>Liens utiles</h4>
+							<ul class="footer-link-list">
+								<li><a href="create.html" class="footer-link">Créer évènement</a></li>
+								<li><a href="sell_tickets_online.html" class="footer-link">Vendre tickets en ligne</a></li>
+								<li><a href="term_and_conditions.html" class="footer-link">Termes & Conditions</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="footer-content">
+							<h4>Resources</h4>
+							<ul class="footer-link-list">
+								<li><a href="pricing.html" class="footer-link">Tarification</a></li>
+								<li><a href="refer_a_friend.html" class="footer-link">Référer un ami</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="footer-content">
+							<h4>Nous suivre</h4>
+							<ul class="social-links">
+								<li><a href="#" class="social-link"><i class="fab fa-facebook-square"></i></a>
+								<li><a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+								<li><a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+								<li><a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+								<li><a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+							</ul>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="footer-copyright-text">
+							<p class="mb-0">© 2023, <strong>Event-CERIL</strong>. Tous droits réservés. Propulsé par CERIL</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer End-->
+	
+	
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="vendor/OwlCarousel/owl.carousel.js"></script>
+	<script src="vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>	
+	<script src="js/custom.js"></script>
+	<script src="js/night-mode.js"></script>
+	
+</body>
+</html>
